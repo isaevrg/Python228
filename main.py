@@ -2935,9 +2935,9 @@ from random import randint
 # print("py             ".rstrip())
 # print("              py             ".strip())
 #
-# print("http:/www.python.org".lstrip('/:pths'))
-# print('py.$$$;'.rstrip(';$.'))
-# print("https:/www.python.org".lstrip('htps:/').rstrip('org.'))
+print("http:/www.python.org".lstrip('/:pths'))
+print('py.$$$;'.rstrip(';$.'))
+print("https:/www.python.org".lstrip('htps:/').rstrip('org.'))
 
 # st = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования."
 # print(st)
@@ -3127,7 +3127,15 @@ import re
 
 print("Hello")
 
-
+s1 = '+7 499-456-45-78'
+s2 = '+74994564578'
+s3 = '7 (499) 456 45 78'
+s4 = '+7 (499) 456-45-78'
+reg = r'^([+]*\d{1}[\s|(]*\d{3}[)|\s|-]*\d{3}[\s|-]*\d{2}[\s|-]*\d{2})$'
+print(re.findall(reg, s1))
+print(re.findall(reg, s2))
+print(re.findall(reg, s3))
+print(re.findall(reg, s4))
 
 
 
